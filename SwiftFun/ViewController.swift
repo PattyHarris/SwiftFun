@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
     
     var buttonTapCount: Int = 0
     
@@ -31,6 +33,13 @@ class ViewController: UIViewController {
 
     @IBAction func myButtonDidTap(_ sender: Any) {
         
+        // Testing conversion of types
+        let sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
+        myLabel.text = String("Sum: \(sum)")
+        
+        // Commented out to test type conversion using the
+        // addition of 2 text felds.
+        /*
         if buttonTapCount == 0 {
             
             view.backgroundColor = originalBackground
@@ -49,8 +58,9 @@ class ViewController: UIViewController {
             buttonTapCount = 0
         }
         
-        // Added to test git
-        print(buttonTapCount)
+         // Added to test git
+         print(buttonTapCount)
+         */
     }
     
     override func didReceiveMemoryWarning() {
