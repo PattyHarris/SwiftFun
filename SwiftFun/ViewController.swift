@@ -48,6 +48,9 @@ class ViewController: UIViewController {
             
             buttonTapCount = 0
         }
+        
+        // Added to test git
+        print(buttonTapCount)
     }
     
     override func didReceiveMemoryWarning() {
