@@ -48,21 +48,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fV-zT-afd" userLabel="Math Switch">
+                                <rect key="frame" x="163" y="156" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2fV-zT-afd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1mm-zt-h8J"/>
                             <constraint firstItem="xnf-aX-TCD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Vk-FF-f7o"/>
                             <constraint firstItem="whw-ts-TtN" firstAttribute="top" secondItem="PLu-s1-71o" secondAttribute="bottom" constant="10" id="2jz-hH-JNE"/>
                             <constraint firstItem="PLu-s1-71o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RJG-OL-iNv"/>
                             <constraint firstItem="whw-ts-TtN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X1l-g5-o9P"/>
                             <constraint firstItem="fva-Nl-PP1" firstAttribute="top" secondItem="xnf-aX-TCD" secondAttribute="bottom" constant="10" id="fzL-PI-K0f"/>
                             <constraint firstItem="xnf-aX-TCD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gGy-mZ-g8f"/>
+                            <constraint firstItem="PLu-s1-71o" firstAttribute="top" secondItem="2fV-zT-afd" secondAttribute="bottom" constant="10" id="lM0-AJ-ba5"/>
                             <constraint firstItem="fva-Nl-PP1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rKF-7j-p57"/>
                             <constraint firstItem="xnf-aX-TCD" firstAttribute="top" secondItem="whw-ts-TtN" secondAttribute="bottom" constant="56" id="zue-KK-uny"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionSwitch" destination="2fV-zT-afd" id="5rG-d8-4FV"/>
                         <outlet property="bottomTextField" destination="whw-ts-TtN" id="HPl-Sz-2oo"/>
                         <outlet property="myLabel" destination="xnf-aX-TCD" id="O6i-A4-0FY"/>
                         <outlet property="topTextField" destination="PLu-s1-71o" id="bd6-BF-lZ6"/>

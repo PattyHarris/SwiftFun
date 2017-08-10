@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    @IBOutlet weak var additionSwitch: UISwitch!
     
     var buttonTapCount: Int = 0
     
@@ -33,9 +34,19 @@ class ViewController: UIViewController {
 
     @IBAction func myButtonDidTap(_ sender: Any) {
         
+        // Testing booleans
+        let addition = additionSwitch.isOn
+        var sum : Double = 0.0
+
         // Testing conversion of types
-        let sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
-        myLabel.text = String("Sum: \(sum)")
+        if addition {
+            sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
+        }
+        else {
+            sum = Double(topTextField.text!)! - Double(bottomTextField.text!)!
+        }
+        
+        myLabel.text = String("Total: \(sum)")
         
         // Commented out to test type conversion using the
         // addition of 2 text felds.
